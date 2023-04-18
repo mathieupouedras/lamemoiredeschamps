@@ -2601,7 +2601,6 @@
     "saison": "printemps",
     "espace": "zone_cultivee",
     "imageFile": "271.jpg",
-    "format": 1,
     "activites": "travaux",
     "isPrivate": true,
     "text": "Les mois d'hiver sont passés.<\/BR>Les zones naturelles : landes, friches, tourbières, et prairies ont cédé fagots, ajonc, litière et lierre.<\/BR>Les serpes, haches, balais et râteaux sont rangés.<\/BR>Le printemps peut s'installer, la flore et la faune n'ont besoin de personne.<\/BR>A l'inverse dans les zones cultivées l'activité explose :<\/BR>les hommes, chevaux, bétail, charrettes, brouettes, herses, fourches se mettent au service des futures récoltes.<\/BR>Du matin au soir chaque moment du calendrier est exploité.<\/BR>Tout cet espace jusque là silencieux, engourdi par l'hiver explose. La moindre parcelle devient un chantier.<\/BR>Dans les haies, buissons et arbres fruitiers, les oiseaux et les abeilles retrouvent leur place.<\/BR>Le printemps est là.<\/BR>",
@@ -3447,6 +3446,7 @@
     "saison": "hiver",
     "espace": "zone_non_cultivee",
     "imageFile": "357.jpg",
+    "format": 1,
     "isPrivate": true,
     "text": "Dans la nuit, une fine couche de neige s’est posée en douceur sur la Lande. Autour de la chapelle silencieuse, engourdie chaque chose est à sa place. Sous ce léger manteau blanc, personne ne viendra travailler, personne ne passera…et pourtant cette lande est bien vivante. Cette neige est si fine qu’il est aisé de reconnaître l’ajonc, la bruyère, les talus, les cheminements, chênes, saules etc. De même, il est aisé de deviner celui qui a fait les fagots, celui qui a coupé la litière, celle qui est venue laver à la fontaine. La chapelle, immobile, attendra ainsi quelques jours et bientôt retrouvera ses fidèles.",
     "title": "La Lande sous la neige"
@@ -4185,7 +4185,6 @@
     "text": "La toile 420, intitulée de l’été à l’automne a souhaité souligner le caractère vital de cette période pour l’exploitation familiale en mode polyculture-élevage. C’était en 1950. Vitale par tout ce qu’elle devait livrer. Un soleil nécessaire, haut dans le ciel, imposant plus de 15 heures de travail dans une journée. Une récompense, pour le travail important déjà produit durant le printemps ! Parfois des échecs quand l’orage troublera la moisson. Du foin, pour l’hiver prochain. Du grain, blé, seigle, avoine, orge, sarrasin. Des fruits : cerises, poires, prunes, pommes. Des pommes de terre, navets, betteraves. Des chaumes précieux pour faire la soudure entre prairies libérant le foin et prairies devant se mettre au repos. L’occasion de se regrouper pour mieux affronter ensemble les travaux les plus durs. Enfin une période si appréciée par les enfants. Libérés des sabots, cahiers, crayons, comme à l’école ils sauront, dans les prairies le matin et l’après-midi reconstituer les récrées avec les copains / copines.<\/BR><\/BR>PS : la toile 429 comme la 420, vous invitent à retrouver dans les toiles dédiées à cette période, tout ce qui pouvait se passer dans les champs, prairies, landes, villages.",
     "title": "L’été, juillet, août, septembre"
   },
-
 {
     "number": 430,
     "saison": "automne",
@@ -4195,7 +4194,6 @@
     "text": "Dans la toile 425, le village s’efforçait de quitter l’hiver pour mieux accueillir le printemps. Nous sommes à la mi-octobre, durant la période printemps, été, il a été question de semer, biner, faucher, moissonner. Désormais, place à l’automne qui à l’approche de l’hiver va devoir terminer les récoltes. Ce chevauchement été:automne si caractéristique était appelé l’Été indien pour certains, ou l’été de la Saint Martin pour d’autres. Dans notre village, on l’appelait le printemps de «Kergonan ». En effet, le saint local, Saint Luc, était fêté le dimanche le plus proche du 18 octobre. Un moment très attendu qui allait favoriser la moisson du blé noir. Dans les parcelles, les chaumes étaient en fleurs, pensées sauvages, camomilles, ravenelles. Autour des parcelles, les pommiers en profitaient pour exposer leurs fruits à la douceur de cette période.",
     "title": "Mi-octobre"
   },
-
 {
     "number": 431,
     "saison": "automne",
@@ -4205,7 +4203,6 @@
     "text": "Discrètement, septembre a quitté les dernières journées tièdes de l’été. Octobre, s’est contenté d’afficher ses belles couleurs de l’automne. Novembre, appelé aussi « miz du », ou « kalan gouianv » s’est imposé franchement avec ses brumes, pluies et vent. Le matin, le soleil est timide et les après-midi très courtes. C’est l’hiver qui s’impose. Dans les champs, les parcelles se reposent. Dans les friches et landes c’est l’heure de la litière, fougères, bruyère ajonc, feuilles mortes. Comme la sève est descendue, c’est le moment des fagots. Les villages retrouvent leurs activités de saison. Il faut broyer les pommes, faire marcher les pressoirs et rincer les tonneaux. Du matin au soir il faut nourrir le feu dans les habitations. Dans les étables et remises, il faut broyer l’ajonc, lierre et houx. Le temps ne favorise pas le pâturage. L’hiver est bien là.<\/BR><\/BR>Miz du : mois sombre<\/BR><\/BR>kalan gouianv : début de l’hiver",
     "title": "Novembre (Miz du, Kalan Gouiannv)"
   },
-
 {
     "number": 432,
     "saison": "hiver",
