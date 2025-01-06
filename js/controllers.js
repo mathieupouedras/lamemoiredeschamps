@@ -34,6 +34,7 @@ function hidePrivatePaintings($scope) {
   $scope.paintings = $scope.paintings.filter(function (element) {
     // hack to avoid displaying Glyphicon
     element.isPrivate = !element.isPrivate;
+    element.isReserved = !element.isReserved;
     return element.isPrivate;
   });
 }
