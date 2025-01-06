@@ -47,11 +47,11 @@
           </a>
           <div class="caption">
             <h6>
+              {{paintings[i].number}} {{paintings[i].title}}
               <span title="Disponible" ng-if="!paintings[i].isPrivate && !paintings[i].isReserved" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               <span title="Collection privée" ng-if="paintings[i].isPrivate" class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
               <span title="Réservé" ng-if="paintings[i].isReserved" class="glyphicon glyphicon-lock" aria-hidden="true"></span>
               <span title="Grand format" ng-if="paintings[i].format" class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-              {{paintings[i].number}} {{paintings[i].title}}
             </h6>
           </div>
         </div>
