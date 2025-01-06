@@ -5,43 +5,6 @@ paintingsControllers.controller('PaintingsCtrl', function ($scope, $http, $sce, 
 });
 
 paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sce, $location) {
-  $scope.saison = ''
-  $scope.activites = ''
-  $scope.espace = ''
-  $scope.connexes = ''
-  $scope.filtrer = function () {
-      $scope.paintings = $scope.dataPaintings.filter(function (element) {
-        var conditionSaison = evaluerConditionFiltre($scope.saison, element.saison)
-        var conditionActivites = evaluerConditionFiltre($scope.activites, element.activites)
-        var conditionEspace = evaluerConditionFiltre($scope.espace, element.espace)
-        var conditionConnexes = evaluerConditionFiltre($scope.connexes, element.connexes)
-        return conditionSaison && conditionActivites && conditionEspace && conditionConnexes
-      })
-  }
-
-  function evaluerConditionFiltre(saisieUtilisateur, proprieteTableau) {
-    var conditionSaison = true
-    if (saisieUtilisateur !== '') {
-      if (proprieteTableau === null) {
-        conditionSaison = false
-      }
-      else {
-        conditionSaison = proprieteTableau === saisieUtilisateur
-      }  
-    }
-
-    return conditionSaison
-
-  }
-
-  $scope.supprimerFiltres = function () {
-    $scope.saison = ''
-    $scope.activites = ''
-    $scope.espace = ''
-    $scope.connexes = ''
-    $scope.paintings = $scope.dataPaintings
-  }
-
   loadData($scope, $http, $sce, $location, false);
 });
 

@@ -35,75 +35,9 @@
       <h3>Lucien Pouëdras</h3>
     </div>
   </div>
-  <div class="row">
-    <h3>Filtres ({{paintings.length}} tableaux)</h3>
-  </div>
-  <!-- Saisons -->
-  <div class="row">
-    <ul>
-      <li class="col-md-2 col-sm-2 col-lg-2">
-        <label>Saison :</label>
-      </li>
-      <li class="col-md-2 col-sm-2 col-lg-2">
-        <label>Printemps
-          <input type="radio" ng-model="saison" value="printemps">
-        </label>
-      </li>
-      <li class="col-md-2 col-sm-2 col-lg-2">
-        <label>Eté
-          <input type="radio" ng-model="saison" value="ete">
-        </label>
-      </li>
-      <li class="col-md-2 col-sm-2 col-lg-2">
-        <label>Automne
-          <input type="radio" ng-model="saison" value="automne">
-        </label>
-      </li>
-      <li class="col-md-2 col-sm-2 col-lg-2">
-        <label>Hiver
-          <input type="radio" ng-model="saison" value="hiver">
-        </label>
-      </li>
-    </ul>
-  </div>
+
   </br>
-  <!-- Activites -->
-  <div class=row>
-    <span class="col-md-4 col-sm-4 col-lg-4">
-      <label for="activites"> Activités: </label>
-      <select name="activites" ng-model="activites">
-        <option value="travaux">Grands travaux</option>
-        <option value="elevage">Elevage</option>
-        <option value="cueillette">Ceuillette</option>
-        <option value="manutention">Petis travaux</option>
-        <option value="repos">Hors activité</option>
-      </select>
-    </span>
-    <span class="col-md-4 col-sm-4 col-lg-4">
-      <label for="espace"> Espace: </label>
-      <select name="espace" ng-model="espace">
-        <option value="interieurs">Intérieurs</option>
-        <option value="village">Village</option>
-        <option value="zone_cultivee">Cultivés</option>
-        <option value="zone_non_cultivee">Non cultivés</option>
-        <option value="hors_quotidien">Hors quotidien</option>
-      </select>
-    </span>
-    <span class="col-md-4 col-sm-4 col-lg-4">
-      <label for="connexes"> Connexes: </label>
-      <select name="connexes" ng-model="connexes">
-        <option value="artisans">Artisans / commerçants</option>
-        <option value="indigents">Indigents</option>
-        <option value="loisirs">Loisirs - école</option>
-      </select>
-    </span>
-  </div>
   </br>
-  <div class="row">
-    <input type="button" ng-click="filtrer()" class="btn btn-default" value="Filtrer" />
-    <input type="button" ng-click="supprimerFiltres()" class="btn btn-default" value="Supprimer tous les filtres" />
-  </div>
-  <hr>
   <div class="row" ng-repeat="painting in paintings track by $index" ng-if="$index % 6 == 0">
     <div class="col-md-2 col-sm-2 col-lg-2"
       ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4, $index + 5]"
