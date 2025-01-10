@@ -36,6 +36,15 @@
 
   </br>
   </br>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" ng-click="toggleAvalaible()" ng-model="hideUnavailable">
+    <label class="form-check-label" for="flexCheckDefault">
+      Masquer les toiles indisponibles ({{paintings.length}} toiles affichées)
+    </label>
+  </div>
+  </br>
+  </br>
+
   <div class="row" ng-repeat="painting in paintings track by $index" ng-if="$index % 6 == 0">
     <div class="col-md-2 col-sm-2 col-lg-2"
       ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4, $index + 5]"

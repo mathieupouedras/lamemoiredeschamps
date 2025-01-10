@@ -3,8 +3,17 @@ var paintingsControllers = angular.module('paintingsControllers', []);
 paintingsControllers.controller('PaintingsCtrl', function ($scope, $http, $sce, $location) {
   loadData($scope, $http, $sce, $location, true);
 });
-
 paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sce, $location) {
+  
+  $scope.toggleAvalaible = function () {
+    $scope.paintings = $scope.dataPaintings.filter(function (element) {
+      if ($scope.hideUnavailable) {
+        return !element.isPrivate && !element.isReserved;
+      }
+      return true;
+    });
+  }
+  
   loadData($scope, $http, $sce, $location, false);
 });
 
