@@ -48,7 +48,7 @@
     "espace": "zone_non_cultivee",
     "imageFile": "005.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Les prairies dites naturelles sont placées de part et d'autre du ruisseau commun et ce n'est pas par hasard que, plusieurs villages se trouvent ainsi tôt le matin représentés par des hommes arrivant pour la première coupe de foin.<\/BR>La veille déjà, les marteaux chantant sous la lame de la faux faisaient courir le bruit que le temps s'était mis au beau. Ces prairies plutôt éloignées des villages étaient demeurées muettes depuis l'automne dernier et brutalement, tout le village va se transporter là, le temps de la fenaison. Les parcelles étaient si petites que les gens s'interpellaient le temps de passer la pierre sur la faux avant de faire un nouveau rang. <\/BR>Un peu plus tard, les épouses rejoindront les hommes. Entre temps, elles auront assuré les travaux de la ferme. Elles seront les bienvenues vers 9 heures car chacun sait qu'elles arriveront avec les fourches mais surtout avec une omelette et du cidre bouché. Cette omelette est d'autant précieuse qu'il s'agit des premiers oeufs pondus avec le retour des beaux jours. Dès que le soleil passera au-dessus des arbres, que la rosée sera insuffisante, les faux s'arrêteront  pour reprendre demain matin à l'aube.<\/BR>",
     "title": "Les faucheurs dans les prairies"
   },
@@ -474,7 +474,7 @@
     "imageFile": "049.jpg",
     "connexes": "artisans",
     "activites": "manutention",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Cela se passait dans les taillis de Kervarin. <\/BR>Les arbustes, chênes et bouleaux en particulier, étaient abattus puis coupés en rondins. <\/BR>Le charbonnier, à l'aide d'une brouette, rassemblait les rondins pour en faire une meule. <\/BR>C'était une construction délicate. Les rondins, placés à la verticale, devaient laisser au centre une cheminée. Le tout était recouvert par des mottes de terre et d'herbe avec, de-ci, delà, quelques bouches d'aération pour permettre la conduite du feu. <\/BR>Le feu était allumé par le haut, afin qu'il descende progressivement sans s'emballer. La cuisson durait deux à trois jours. Il fallait être vigilant. Une fournée brûlée, c'était aussi le salaire en fumée. Heureusement, le charbonnier avait pour lui l'expérience qui lui permettait d'apprécier la combustion à la couleur de la fumée ou tout simplement à l'odeur. <\/BR>Cette surveillance s'imposait également de nuit. La femme qui, de jour, faisait les fagots, <\/BR>y participait. Le couple s'est construit une cabane pour la durée du contrat.<\/BR>",
     "title": "Les charbonniers dans les taillis"
   },
@@ -832,7 +832,7 @@
     "imageFile": "089.jpg",
     "connexes": "artisans",
     "activites": "manutention",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Elle portait le numéro 18.<\/BR>Elle était appelé écluse de Sainte Barbe du nom de cette chapelle située sur les hauteurs de la rive opposée. L'écluse était bien plus qu'un passage technique obligatoire. C'était d'abord la rencontre des mariniers, ces gens de l'eau avec la terre des paysans.<\/BR>Durant la manœuvre, les chevaux se nourrissaient tout en se reposant. Les mariniers eux-mêmes en faisaient autant. Le fret était principalement constitué de chaux vive, amendements marins, charbon de Cardiff, la pierre et le sable.<\/BR>Le train et la route vont rapidement avoir raison de cette activité.<\/BR>",
     "title": "L'écluse de Pont-Augan (Ste Barbe)"
   },
@@ -862,7 +862,7 @@
     "espace": "interieurs",
     "imageFile": "092.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "L'hiver est là. Les labours terminés, il n'est plus question de travaux dans les champs. La terre se repose pour mieux \"donner\" au printemps prochain. <\/BR>À la ferme, novembre et décembre ne sont pas de trop pour transformer en cidre une belle récolte de pommes. <\/BR>Avant les pluies, en octobre principalement, elles ont été ramassées, regroupées à la ferme par variétés et recouvertes d'une couche de paille. Elles finiront ainsi de mûrir. <\/BR>Broyer les pommes demande quatre à cinq personnes : deux pour actionner le moulin, les autres assurant l'approvisionnement de la machine. <\/BR>Le patron a en charge la conduite de la motte dans le pressoir : une couche de pommes broyées, puis une couche de belle paille de froment, à travers laquelle s'écoulera le cidre dès que le pressoir sera mis en action. <\/BR>Les enfants sont autorisés à se tenir proches. Ils peuvent ramasser les pommes égarées, et, en récompense, à l'aide d'une paille, boire le premier cidre doux qui s'écoule du pressoir.<\/BR>",
     "title": "La fabrication du cidre (à l'intérieur)"
   },
@@ -912,7 +912,7 @@
     "espace": "zone_cultivee",
     "imageFile": "098.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Cela se passait à la fin du mois de Septembre. <\/BR>Dès que le sarrasin était coupé à la faucille, il fallait le remettre debout en gerbes. Les dernières journées ensoleillées finiront de faire mûrir le grain. Le blé noir demandait une terre légère mais bien finement préparée. De plus, elle devait être « neuve », c'est à dire succéder à une friche. La culture du navet lui succédait. Les coteaux de Quistinic s'y prêtaient bien. Dans les terres plus riches, on risquait de faire de la paille mais pas de grain.<\/BR>",
     "title": "La moisson du blé noir"
   },
@@ -1011,7 +1011,7 @@
     "espace": "interieurs",
     "imageFile": "109.jpg",
     "activites": "manutention",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "La nécessité de produire du chanvre dans chaque exploitation n'a guère continué au-delà de 1930.<\/BR>Les différents éléments témoins de la chaîne sont toutefois restés à leur place parfois de façon vivante.<\/BR>Le chanvre était semé début mai pour être arraché avec les belles journées de septembre. Un peu comme le sarrasin, les gerbes étaient maintenues debout, le temps de bien sécher.<\/BR>Il était alors conduit au rouissage ; dans une marre maintenu enfoncé sous l'eau par de grosses pierres.<\/BR>Après quelques semaines, il était retiré de l'eau et mis à égoutter contre les haies. Il restait à le sécher définitivement par un passage au four après le pain de seigle.<\/BR>La dernière opération consistait à séparer les fibres de la canne.<\/BR>C'est l'objet du tableau.<\/BR>Après un peignage méticuleux il était disponible pour le cordier ou le tisserand qui en faisait des toiles solides.<\/BR>",
     "title": "Le travail du chanvre"
   },
@@ -1617,7 +1617,7 @@
     "imageFile": "174.jpg",
     "connexes": "artisans",
     "activites": "manutention",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Un travail qui se situe de préférence à la sortie de l'hiver pour les troncs abattus en automne à la descente de la sève.<\/BR>Le sol est sec et c'est le moment de les approcher de la scierie ou des sabotiers quand il s'agit de hêtre.<\/BR>Les chevaux sont non seulement robustes mais surtout très habiles dans les manœuvres.<\/BR>Difficile de savoir du cheval et de son maître lequel parle à l'autre. La complicité est totale dans la recherche de l'efficacité par des efforts inutiles.<\/BR>Les chevaux de cette taille étaient le plus souvent des mâles castrés.<\/BR>Les hommes aussi produisent bien souvent des efforts violents en particulier quand il s'agissait de pousser les billes de bois dans la charrette qui tirait le diable.<\/BR>Ce travail en forêt ; loin des habitations, exigeait la préparation des repas sur place.<\/BR>Les chevaux eux-même avaient à disposition le foin et surtout l'avoine qui donnait la force nécessaire.<\/BR>",
     "title": "les charretiers au travail"
   },
@@ -1744,7 +1744,7 @@
     "espace": "zone_non_cultivee",
     "imageFile": "187.jpg",
     "activites": "cueillette",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Cela se passe loin du village à la lisière d'un bois, un lieu silencieux car rarement visité, sinon par le geai et le pic vert qui se font entendre.<\/BR>Une fois l'an après la chute des feuilles la récolte de la litière avait lieu.<\/BR>Munies de râteaux les femmes rassemblaient les feuilles mortes mêlées à la fougère sèche.<\/BR>Les hommes plus robustes, à l'aide de fourches approchaient cette litière du tombereau<\/BR>Un enfant ou deux dans ce même tombereau tassait le tout en surveillant et rassurant le cheval qui devait patienter.<\/BR>",
     "title": "La récolte de la litière"
   },
@@ -2153,7 +2153,7 @@
     "imageFile": "227.jpg",
     "connexes": "artisans",
     "activites": "manutention",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Généralement le sabotier était installé dans un hameau. Son atelier était sommaire, une hutte recouverte de genet.<\/BR>L'activité comportait trois postes de travail.<\/BR>- L taille avec une hache à lame large avec un manche courbe et arrondi à son extrémité pour prendre appui sur l'aine.<\/BR>Ce poste disposait d'un billot placé à l'extérieur.<\/BR>- Une fois dégrossi le sabot était finement taillé avec une longue lame fixé et articulée sur un établi ou cheval de bois.<\/BR>- Enfin le sabot était creusé avec un jeu de tarrieres. Un système de pièces de bois permettait la fixation du sabot sur un second cheval de bois dont les pieds étaient enfoncés dans le sol.<\/BR>Ces deux postes souvent adossés à la hutte recevaient toute la lumière naturelle nécessaire tout en était à l'abri de la pluie.<\/BR>Parfois plusieurs sabotiers se regroupaient pour travailler des troncs en pleine forêt évitant ainsi le transport de billes jusqu'au village.<\/BR>Un fumoir, jour et nuit accélérait le séchage du sabot terminé.<\/BR>",
     "title": "Sabotiers en foret"
   },
@@ -2310,7 +2310,7 @@
     "imageFile": "242.jpg",
     "connexes": "loisirs",
     "activites": "repos",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "La cour de l'école est en terre battue.<\/BR>Dès le mois de mars par période de beau temps les garçons jouaient beaucoup aux billes.<\/BR>Principalement il s'agissait, du rond, du trait, du poc ou alors du neuf trous représenté au premier plan de la toile.<\/BR>Ce jeu se pratiquait à deux voir trous concurrents.<\/BR>Depuis un trou il s'agissait de conquérir successivement les autres trous, tout en chassant ses concurrents.<\/BR>Pour chasser il s'agissait de maintenir la bille entre le pouce et l'index, ce dernier faisant office de ressort chassant la bille, qui devait soit se loger dans le trou suivant soit éliminer la bille concurrente proche du trou.<\/BR>Généralement sur les neuf trous deux étaient considérés comme forteresses car aménagées de telle sorte que l'accès était difficile.<\/BR>",
     "title": "Le jeu du neuf trous"
   },
@@ -2399,7 +2399,7 @@
     "espace": "village",
     "imageFile": "251.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Le blé noir venait à maturité en octobre.<\/BR>Entre le fauchage et le battage l'on disposait de quelques journées seulement aussi il fallait nécessairement placer cette moisson dans ce qu'on appelle habituellement l'été indien.<\/BR>Une petite rosée le matin, un temps  calme et ensoleillé du matin au soir.<\/BR>Le battage au fléau le plus ancien avant l'arrivée des batteuses mécaniques était assuré par un groupe d'hommes frappant à un rythme tel que les fléaux ne devaient pas se rencontrer.<\/BR>Le passage au tarare était un travail de femmes, seuls les hommes faisaient tourner l'axe entraînant à la fois le ventilateur et le tamisage.<\/BR>Sur le sol, au râteau où pieds nus il était important d'aérer le matelas de grains qui ne devait en aucun cas chauffer.<\/BR>Les fléaux ont cessé leur frappe rythmée avec la dernière guerre.<\/BR>",
     "title": "Battage du blé noir au fléau"
   },
@@ -2448,7 +2448,7 @@
     "imageFile": "256.jpg",
     "connexes": "loisirs",
     "activites": "repos",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Il s'agit d'une modeste chapelle qui recevait chaque dimanche matin les villages proches.<\/BR>Un prêtre venait du bourg pour l'office et le catéchisme des enfants scolarisés à l'école de la république.<\/BR>Généralement la communion avait été alors précédée du passage par le confessionnal.<\/BR>Ainsi en dehors de la période de Pâques seules quelques femmes « habituées » trouvaient le temps d'aller à confesse avant la communion.<\/BR>Les hommes n'aimaient pas beaucoup la confrontation avec le prêtre ! C'est vrai que les motifs de réprimandes de ce côté là étaient nombreuses !<\/BR>Durant la communion, contrairement à l'époque actuelle il n'était pas question de s'asseoir ou de se mettre à Genoux. La position debout était de vigueur.<\/BR>",
     "title": "La communion"
   },
@@ -3349,7 +3349,7 @@
     "espace": "zone_cultivee",
     "imageFile": "347.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Autour de pâques il faut être dans les champs ! Les gelées blanches se sont éloignées. C’est le moment de faire les plantations. La priorité revient à la pomme de terre. Le fumier qui a passé tout l’hiver dans l’étable fera l’affaire une fois enfoui par la charrue. Cerisiers, poiriers et aubépines sont en fleurs. Sur les talus les primevères en font de même, alors que les pâquerettes par petites taches éclairent les « griennes ». Colza et seigle que les troupeaux attendaient sont enfin disponibles. Entre la parcelle qui reçoit la pomme de terre et celle semée de trèfle, un « Lannec » ancien continue à produire de l’ajonc pour le cheval. Pommiers et chênes se préparent à sortir de leur sommeil hivernal. <\/BR><\/BR>« Griennes » bandes en friches entourant les parcelles cultivées. <\/BR> « Lannec » petit espace, semé d’ajonc pour le cheval",
     "title": "Travaux de printemps"
   },
@@ -3509,7 +3509,7 @@
     "saison": "automne",
     "espace": "zone_non_cultivee",
     "imageFile": "363.jpg",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "L’automne s’est installé.  Les bouleaux ont abandonné leurs petites feuilles jaunes.  Ici ou là, l’ajonc « nain » laisse échapper ses premières fleurs de l’hiver.  La bruyère s’est éteinte brulée par la chaleur du mois d’août.  Sous les pins, quelques grosses pierres, plus ou moins alignées tantôt penchées, tantôt couchées.  Ces pierres appartenaient à notre quotidien, là où nous accompagnions notre bétail. Une lande partagée avec trois autres villages.  Alors que notre instituteur nous avait « appris » les menhirs de Carnac, à aucun moment il n’avait été question de « nos menhirs à nous » !  Cachés dans l’ajonc, la bruyère, et les fougères ils appartenaient à notre terrain de jeu.  Ou plutôt, ils appartenaient aux Korrigans qui voulaient bien nous les laisser dans la journée alors qu’eux-mêmes les occupaient les nuits éclairées par la lune !  C’était bien ainsi.  Désormais, avec le remembrement, les bulldozers les ont ignorés, bousculés, chassés alors que ceux de Carnac appartiennent au patrimoine mondial!      P. S. La lande évoquée était limitrophe avec le village de « L’an-menhir ».  Tout à côté, les landes de Kersolan abritent toujours un alignement encore perceptible.",
     "title": "Les menhirs dans la lande"
   },
@@ -3569,7 +3569,7 @@
     "imageFile": "369.jpg",
     "connexes": "artisans",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Dans les champs Pâques est en place. Les cerisiers sont en fleurs, et l’ajonc va bientôt céder sa couleur jaune au genet. Sur les talus, les primevères illuminent les chemins alors que les sentiers sont bordés de pâquerettes et pissenlits. Désormais, pour aller d’un village à l’autre le facteur peut emprunter les sentiers des enfants qui vont à l’école. Notre facteur n’est pas véritablement surchargé de courrier ! Quelques rares journaux, une lettre adressée par un fils faisant son service militaire … Pour autant, les nouvelles ne manquent pas, aussi, un arrêt s’impose naturellement. Une pause-conversation sera la bienvenue pour tous, cheval compris. Une fois les nouvelles échangées, le facteur prendra les messages ou commissions qu’il livrera dans les villages prochains. Les réseaux sociaux n’ont rien inventé !",
     "title": "Le facteur des champs"
   },
@@ -3618,7 +3618,7 @@
     "espace": "zone_cultivee",
     "imageFile": "374.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Mi-juillet la moisson blanche est lancée. Le seigle précède l’avoine alors que le blé fermera la marche. Si la lame de la faucheuse peinait pour la coupe du foin encore vert, la paille, sèche sur pied ne posera aucun problème et les chevaux apprécieront. Deux chevaux constitueront l’attelage. Dans les brancards, un cheval expérimenté qui saura conduire les manœuvres pour contourner les  pommiers et assurer le demi-tour. Sur le siège de droite, mon père calibre les futures gerbes à l’aide d’un long bâton. Il lâchera la pédale dès que la gerbe aura atteint le volume nécessaire. Sur le second siège un enfant tient les guides que son père saisira à l’approche des manœuvres. Pour l’enfant il s’agit d’un jeu, mais aussi d’une responsabilité car il doit être attentif et ainsi anticiper le moment ou son père saisira les guides.",
     "title": "La moisson à la faucheuse"
   },
@@ -3800,7 +3800,7 @@
     "espace": "zone_cultivee",
     "imageFile": "392.jpg",
     "activites": "travaux",
-    "isPrivate": false,
+    "isPrivate": true,
     "text": "Le bocage tout entier est en fête ! Haies, buissons, chênes, aubépines, genets, jacinthes, primevères, pâquerettes, orchidées … C’est le mois de mai ! Les parcelles cultivées participent aussi à cette fête. Les semis réclament déjà le binage. Le trèfles incarnat, le trèfle violet et le colza voient venir à eux chaque matin la brouette et la faux. Tout autour de ces parcelles, les « griennes » reçoivent les vaches, tout en étant reliées à un piquet elles profitent de l’herbe tendre du printemps. Les pommiers ne sont pas en reste, ils ont revêtu leur habit de mai. Plus ou moins teintées de blanc, de rose ou de rouge, leurs fleurs annoncent leurs différences selon qu’elles produiront des fruits hâtifs, tardifs, rouges, jaunes … C’était avant 1950 ! Alors que le paysage était façonné par l’imbrication des cultures, friches et élevages.<\/BR><\/BR> P.S. : « griennes » zones en friche séparant les parcelles, et recevant les pommiers.",
     "title": "Les pommiers en fête"
   },
