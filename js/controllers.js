@@ -15,7 +15,9 @@ paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $
     if ($scope.painting) {
       $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
     }
-    $scope.loading = false;
+    if (!$scope.painting || !$scope.painting.imageFile) {
+      $scope.loading = false;
+    }
   });
 
   $scope.back = function () { $window.history.back(); };
@@ -26,6 +28,7 @@ function loadData($scope, $http, $sce, $location, mode) {
   $scope.dataPaintings = [];
   $scope.loading = true;
   $scope.location = $location.path();
+  var spinnerStart = Date.now();
 
   $http.get('data/data.json').success(function (data) {
     $scope.totalPaintings = data.length;
@@ -37,7 +40,14 @@ function loadData($scope, $http, $sce, $location, mode) {
       $scope.paintings = data;
     }
     $scope.dataPaintings = $scope.paintings;
-    $scope.loading = false;
+    var elapsed = Date.now() - spinnerStart;
+    var minTime = 500;
+    var hideSpinner = function() { $scope.loading = false; };
+    if (elapsed >= minTime) {
+      hideSpinner();
+    } else {
+      setTimeout(function() { $scope.$apply(hideSpinner); }, minTime - elapsed);
+    }
     var savedScroll = sessionStorage.getItem('scrollPos');
     if (savedScroll) {
       setTimeout(function () {

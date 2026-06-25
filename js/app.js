@@ -25,3 +25,15 @@ paintingsApp.config(['$routeProvider',
 paintingsApp.run(['$location', function($location) {
   $location.path('/paintings');
 }]);
+
+paintingsApp.directive('imgOnload', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      element.on('load', function() {
+        scope.$eval(attrs.imgOnload);
+        if (!scope.$$phase) scope.$apply();
+      });
+    }
+  };
+});
