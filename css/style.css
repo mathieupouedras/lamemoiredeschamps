@@ -211,11 +211,7 @@ ul li img {
 
 .detail-text-col {
     flex: 1;
-    height: 100%;
     overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .detail-title {
