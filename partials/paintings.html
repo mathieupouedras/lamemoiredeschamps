@@ -49,9 +49,10 @@
       ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]"
       ng-if="paintings[i] != null">
       <div class="thumbnail painting-card" id="painting-{{paintings[i].number}}">
-        <a href="#{{location}}" data-toggle="modal" data-target="#myModal" ng-click="open(paintings[i])">
+        <a href="#/painting/{{paintings[i].number}}" ng-click="saveScroll()">
           <div class="img-wrapper">
-            <img ng-src="images/thumbnails/{{paintings[i].imageFile}}" alt="{{paintings[i].title}}" loading="lazy">
+            <img ng-if="paintings[i].imageFile" ng-src="images/thumbnails/{{paintings[i].imageFile}}" alt="{{paintings[i].title}}" loading="lazy">
+            <div ng-if="!paintings[i].imageFile" class="thumb-no-image">Non numérisé</div>
             <span ng-if="paintings[i].format" class="grand-format-badge">Grand format</span>
           </div>
         </a>

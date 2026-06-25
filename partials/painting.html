@@ -1,0 +1,16 @@
+<div class="painting-detail">
+  <div class="detail-header">
+    <a ng-click="back()" class="detail-back">&#8592; Retour</a>
+  </div>
+
+  <div class="detail-body">
+    <div class="detail-image-col">
+      <img ng-if="painting.imageFile" class="detail-image" ng-src="images/basse-def/{{painting.imageFile}}" alt="{{painting.title}}">
+      <div ng-if="!painting.imageFile" class="detail-no-image">Non numérisé</div>
+    </div>
+    <div class="detail-text-col">
+      <h2 class="detail-title"><span class="detail-number">{{painting.number}} —</span> {{painting.title}}</h2>
+      <div class="detail-text" ng-bind-html="trustedHtmlText"></div>
+    </div>
+  </div>
+</div>

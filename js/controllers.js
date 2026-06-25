@@ -8,6 +8,17 @@ paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sc
   loadData($scope, $http, $sce, $location, 'private');
 });
 
+paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $routeParams, $window) {
+  $http.get('data/data.json').success(function (data) {
+    $scope.painting = data.find(function (p) { return p.number === parseInt($routeParams.number); });
+    if ($scope.painting) {
+      $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
+    }
+  });
+
+  $scope.back = function () { $window.history.back(); };
+});
+
 function loadData($scope, $http, $sce, $location, mode) {
   $scope.paintings = [];
   $scope.dataPaintings = []
@@ -23,6 +34,13 @@ function loadData($scope, $http, $sce, $location, mode) {
       $scope.paintings = data;
     }
     $scope.dataPaintings = $scope.paintings;
+    var savedScroll = sessionStorage.getItem('scrollPos');
+    if (savedScroll) {
+      setTimeout(function () {
+        window.scrollTo({ top: parseInt(savedScroll), behavior: 'instant' });
+        sessionStorage.removeItem('scrollPos');
+      }, 0);
+    }
     $scope.centuries = [];
     [1, 100, 200, 300, 400].forEach(function(marker) {
       var found = $scope.paintings.find(function(p) { return p.number >= marker; });
@@ -32,12 +50,21 @@ function loadData($scope, $http, $sce, $location, mode) {
     console.log(status);
   });
 
+  $scope.saveScroll = function() {
+    sessionStorage.setItem('scrollPos', window.scrollY);
+  };
+
   $scope.scrollTo = function(id, isFirst) {
     if (isFirst) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       var el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (el) {
+        var bar = document.querySelector('.collection-bar');
+        var offset = bar ? bar.offsetHeight : 0;
+        var top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
     }
   };
 

@@ -111,6 +111,93 @@ ul li img {
     color: #bbb;
 }
 
+.painting-detail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.detail-header {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.detail-back {
+    font-size: 1em;
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.detail-back:hover {
+    color: #000;
+}
+
+.detail-number {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.detail-body {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 0;
+}
+
+.detail-image-col {
+    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.detail-image {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    display: block;
+}
+
+.detail-no-image {
+    width: 400px;
+    height: 300px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.detail-text-col {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.detail-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+}
+
 .painting-card {
     margin-bottom: 24px;
     border: none;
@@ -139,8 +226,20 @@ ul li img {
 
 .painting-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+}
+
+.thumb-no-image {
+    width: 100%;
+    height: 120px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 0.85em;
+    font-style: italic;
 }
 
 .painting-caption {
@@ -148,6 +247,9 @@ ul li img {
     font-weight: 600;
     margin: 8px 0 0;
     line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .painting-caption span {

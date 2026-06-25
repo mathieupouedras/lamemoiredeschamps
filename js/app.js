@@ -14,5 +14,13 @@ paintingsApp.config(['$routeProvider',
         templateUrl: 'partials/paintings.html',
         controller: 'AllPaintingsCtrl'
       }).
+      when('/painting/:number', {
+        templateUrl: 'partials/painting.html',
+        controller: 'PaintingCtrl'
+      }).
       otherwise({ redirectTo: '/paintings' });
   }]);
+
+paintingsApp.run(['$location', function($location) {
+  $location.path('/paintings');
+}]);
