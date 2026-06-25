@@ -11,7 +11,7 @@ paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sc
 paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $routeParams, $window) {
   $scope.loading = true;
   var spinnerStart = Date.now();
-  var minTime = 400;
+  var minTime = 200;
 
   function hideSpinner() {
     var elapsed = Date.now() - spinnerStart;
