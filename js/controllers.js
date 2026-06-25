@@ -10,6 +10,15 @@ paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sc
 
 paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $routeParams, $window) {
   $scope.loading = true;
+  var spinnerStart = Date.now();
+  var minTime = 400;
+
+  function hideSpinner() {
+    var elapsed = Date.now() - spinnerStart;
+    var remaining = Math.max(0, minTime - elapsed);
+    setTimeout(function () { $scope.$apply(function () { $scope.loading = false; }); }, remaining);
+  }
+
   $http.get('data/data.json').success(function (data) {
     $scope.painting = data.find(function (p) { return p.number === parseInt($routeParams.number); });
     if ($scope.painting) {
@@ -17,15 +26,11 @@ paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $
     }
     if ($scope.painting && $scope.painting.imageFile) {
       var img = new Image();
-      img.onload = function () {
-        $scope.$apply(function () { $scope.loading = false; });
-      };
-      img.onerror = function () {
-        $scope.$apply(function () { $scope.loading = false; });
-      };
+      img.onload = hideSpinner;
+      img.onerror = hideSpinner;
       img.src = 'images/basse-def/' + $scope.painting.imageFile;
     } else {
-      $scope.loading = false;
+      hideSpinner();
     }
   });
 
