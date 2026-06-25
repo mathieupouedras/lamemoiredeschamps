@@ -179,6 +179,8 @@ ul li img {
     height: 100%;
     display: flex;
     align-items: center;
+    background: #f0f0f0;
+    min-width: 400px;
 }
 
 .detail-image {
@@ -186,6 +188,12 @@ ul li img {
     max-width: 100%;
     width: auto;
     display: block;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .detail-no-image {
