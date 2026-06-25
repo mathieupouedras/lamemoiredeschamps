@@ -14,13 +14,9 @@ paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $
     $scope.painting = data.find(function (p) { return p.number === parseInt($routeParams.number); });
     if ($scope.painting) {
       $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
-      if (!$scope.painting.imageFile) $scope.loading = false;
     }
+    $scope.loading = false;
   });
-
-  $scope.imageLoaded = function() {
-    $scope.$apply(function() { $scope.loading = false; });
-  };
 
   $scope.back = function () { $window.history.back(); };
 });
