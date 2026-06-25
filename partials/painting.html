@@ -9,7 +9,7 @@
 
   <div class="detail-body">
     <div class="detail-image-col">
-      <img ng-if="painting.imageFile" class="detail-image" ng-src="images/basse-def/{{painting.imageFile}}" alt="{{painting.title}}">
+      <img ng-if="painting.imageFile" class="detail-image" ng-src="images/basse-def/{{painting.imageFile}}" alt="{{painting.title}}" onload="angular.element(this).scope().imageLoaded()">
       <div ng-if="!painting.imageFile" class="detail-no-image">Non numérisé</div>
     </div>
     <div class="detail-text-col">
