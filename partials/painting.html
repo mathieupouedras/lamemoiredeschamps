@@ -1,8 +1,8 @@
-<div ng-if="!painting" class="spinner-overlay">
+<div ng-if="loading" class="spinner-overlay">
   <div class="spinner"></div>
 </div>
 
-<div ng-if="painting" class="painting-detail">
+<div ng-if="!loading" class="painting-detail">
   <div class="detail-header">
     <a ng-click="back()" class="detail-back">&#8592; Retour</a>
   </div>

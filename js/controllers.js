@@ -9,11 +9,13 @@ paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sc
 });
 
 paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $routeParams, $window) {
+  $scope.loading = true;
   $http.get('data/data.json').success(function (data) {
     $scope.painting = data.find(function (p) { return p.number === parseInt($routeParams.number); });
     if ($scope.painting) {
       $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
     }
+    $scope.loading = false;
   });
 
   $scope.back = function () { $window.history.back(); };
@@ -21,7 +23,8 @@ paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $
 
 function loadData($scope, $http, $sce, $location, mode) {
   $scope.paintings = [];
-  $scope.dataPaintings = []
+  $scope.dataPaintings = [];
+  $scope.loading = true;
   $scope.location = $location.path();
 
   $http.get('data/data.json').success(function (data) {
@@ -34,6 +37,7 @@ function loadData($scope, $http, $sce, $location, mode) {
       $scope.paintings = data;
     }
     $scope.dataPaintings = $scope.paintings;
+    $scope.loading = false;
     var savedScroll = sessionStorage.getItem('scrollPos');
     if (savedScroll) {
       setTimeout(function () {
