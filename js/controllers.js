@@ -15,7 +15,16 @@ paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $
     if ($scope.painting) {
       $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
     }
-    if (!$scope.painting || !$scope.painting.imageFile) {
+    if ($scope.painting && $scope.painting.imageFile) {
+      var img = new Image();
+      img.onload = function () {
+        $scope.$apply(function () { $scope.loading = false; });
+      };
+      img.onerror = function () {
+        $scope.$apply(function () { $scope.loading = false; });
+      };
+      img.src = 'images/basse-def/' + $scope.painting.imageFile;
+    } else {
       $scope.loading = false;
     }
   });
