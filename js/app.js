@@ -30,10 +30,15 @@ paintingsApp.directive('imgOnload', function() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      element.on('load', function() {
+      var el = element[0];
+      if (el.complete) {
         scope.$eval(attrs.imgOnload);
-        if (!scope.$$phase) scope.$apply();
-      });
+      } else {
+        element.on('load', function() {
+          scope.$eval(attrs.imgOnload);
+          if (!scope.$$phase) scope.$apply();
+        });
+      }
     }
   };
 });
