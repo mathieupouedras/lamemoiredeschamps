@@ -56,14 +56,14 @@ function loadData($scope, $http, $sce, $location, mode) {
 
   $scope.scrollTo = function(id, isFirst) {
     if (isFirst) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     } else {
       var el = document.getElementById(id);
       if (el) {
         var bar = document.querySelector('.collection-bar');
         var offset = bar ? bar.offsetHeight : 0;
         var top = el.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        window.scrollTo({ top: top, behavior: 'instant' });
       }
     }
   };

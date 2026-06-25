@@ -26,7 +26,11 @@
   </div>
 </div>
 
-<nav class="index-nav">
+<div ng-if="paintings.length === 0" class="spinner-overlay">
+  <div class="spinner"></div>
+</div>
+
+<nav ng-if="paintings.length > 0" class="index-nav">
   <a ng-repeat="c in centuries" ng-click="scrollTo('painting-' + c.number, $first)" class="index-nav-item">{{c.label}}</a>
 </nav>
 

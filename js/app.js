@@ -1,5 +1,6 @@
 var paintingsApp = angular.module('paintingsApp', [
   'ngRoute',
+  'ngAnimate',
   'paintingsControllers',
   ]);
 
