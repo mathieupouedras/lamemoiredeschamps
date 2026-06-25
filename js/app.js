@@ -13,5 +13,6 @@ paintingsApp.config(['$routeProvider',
       when('/allpaintings', {
         templateUrl: 'partials/paintings.html',
         controller: 'AllPaintingsCtrl'
-      });
+      }).
+      otherwise({ redirectTo: '/paintings' });
   }]);
