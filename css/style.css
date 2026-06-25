@@ -179,19 +179,9 @@ ul li img {
     height: 100%;
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    background: #f0f0f0;
     min-width: 400px;
-    position: relative;
-}
-
-.detail-image-col::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    filter: blur(12px);
-    transform: scale(1.05);
 }
 
 .detail-image {
@@ -199,8 +189,6 @@ ul li img {
     max-width: 100%;
     width: auto;
     display: block;
-    position: relative;
-    z-index: 1;
     animation: fadeIn 0.4s ease forwards;
 }
 
