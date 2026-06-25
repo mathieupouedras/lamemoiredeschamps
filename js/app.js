@@ -26,19 +26,19 @@ paintingsApp.run(['$location', function($location) {
   $location.path('/paintings');
 }]);
 
-paintingsApp.directive('imgOnload', function() {
+paintingsApp.directive('imgOnload', ['$timeout', function($timeout) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      var el = element[0];
-      if (el.complete) {
+      element.on('load', function() {
         scope.$eval(attrs.imgOnload);
-      } else {
-        element.on('load', function() {
+        if (!scope.$$phase) scope.$apply();
+      });
+      $timeout(function() {
+        if (element[0].complete && element[0].naturalWidth > 0) {
           scope.$eval(attrs.imgOnload);
-          if (!scope.$$phase) scope.$apply();
-        });
-      }
+        }
+      }, 0);
     }
   };
-});
+}]);
