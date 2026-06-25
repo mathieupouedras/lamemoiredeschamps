@@ -8,7 +8,7 @@
   </div>
 
   <div class="detail-body">
-    <div class="detail-image-col">
+    <div class="detail-image-col" ng-style="painting.imageFile && {'background-image': 'url(images/thumbnails/' + painting.imageFile + ')'}">
       <img ng-if="painting.imageFile" class="detail-image" ng-src="images/basse-def/{{painting.imageFile}}" alt="{{painting.title}}">
       <div ng-if="!painting.imageFile" class="detail-no-image">Non numérisé</div>
     </div>
