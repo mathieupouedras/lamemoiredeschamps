@@ -1,5 +1,6 @@
 var paintingsApp = angular.module('paintingsApp', [
   'ngRoute',
+  'ngAnimate',
   'paintingsControllers',
   ]);
 
@@ -13,5 +14,15 @@ paintingsApp.config(['$routeProvider',
       when('/allpaintings', {
         templateUrl: 'partials/paintings.html',
         controller: 'AllPaintingsCtrl'
-      });
+      }).
+      when('/painting/:number', {
+        templateUrl: 'partials/painting.html',
+        controller: 'PaintingCtrl'
+      }).
+      otherwise({ redirectTo: '/paintings' });
   }]);
+
+paintingsApp.run(['$location', function($location) {
+  $location.path('/paintings');
+}]);
+

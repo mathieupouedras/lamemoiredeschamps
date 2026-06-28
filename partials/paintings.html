@@ -26,31 +26,42 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row bg-primary">
-    <div class="col-md-6 text-left">
-      <h3>La mémoire des champs</h3>
-    </div>
-    <div class="col-md-6 text-right">
-      <h3>Lucien Pouëdras</h3>
-    </div>
+<div ng-if="loading" class="spinner-overlay">
+  <div class="spinner"></div>
+</div>
+
+<nav ng-if="!loading" class="index-nav">
+  <a ng-repeat="c in centuries" ng-click="scrollTo('painting-' + c.number, $first)" class="index-nav-item">{{c.label}}</a>
+</nav>
+
+<div class="hero">
+  <h1 class="hero-title">La mémoire des champs</h1>
+  <h2 class="hero-subtitle">Lucien Pouëdras</h2>
+</div>
+
+<div class="collection-bar">
+  <div class="container">
+    <a href="#/paintings" class="collection-tab" ng-class="{'active': location == '/paintings'}">Collection</a>
+    <a href="#/allpaintings" class="collection-tab" ng-class="{'active': location == '/allpaintings'}">Collection privée</a>
+    <span class="collection-count">{{paintings.length}} tableaux <span class="collection-total">· {{totalPaintings}} au total</span></span>
   </div>
-  <div class="row" ng-repeat="painting in paintings track by $index" ng-if="$index % 6 == 0">
-    <div class="col-md-2 col-sm-2 col-lg-2"
-      ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4, $index + 5]"
+</div>
+
+<div class="container">
+  <div class="row" ng-repeat="painting in paintings track by $index" ng-if="$index % 4 == 0">
+    <div class="col-md-3 col-sm-6"
+      ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]"
       ng-if="paintings[i] != null">
-      <div>
-        <div class="thumbnail">
-          <a href="#{{location}}" data-toggle="modal" data-target="#myModal" ng-click="open(paintings[i])">
-            <img ng-src="images/thumbnails/{{paintings[i].imageFile}}" alt="{{paintings[i].title}}">
-          </a>
-          <div class="caption">
-            <h6>
-              <span ng-if="!paintings[i].isPrivate" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-              <span ng-if="paintings[i].format" class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-              {{paintings[i].number}} {{paintings[i].title}}
-            </h6>
+      <div class="thumbnail painting-card" id="painting-{{paintings[i].number}}">
+        <a href="#/painting/{{paintings[i].number}}" ng-click="saveScroll()">
+          <div class="img-wrapper">
+            <img ng-if="paintings[i].imageFile" ng-src="images/basse-def/{{paintings[i].imageFile}}" alt="{{paintings[i].title}}">
+            <div ng-if="!paintings[i].imageFile" class="thumb-no-image">Non numérisé</div>
+            <span ng-if="paintings[i].format" class="grand-format-badge">Grand format</span>
           </div>
+        </a>
+        <div class="caption">
+          <p class="painting-caption"><span>{{paintings[i].number}} —</span> {{paintings[i].title}}</p>
         </div>
       </div>
     </div>

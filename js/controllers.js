@@ -1,28 +1,100 @@
 var paintingsControllers = angular.module('paintingsControllers', []);
 
 paintingsControllers.controller('PaintingsCtrl', function ($scope, $http, $sce, $location) {
-  loadData($scope, $http, $sce, $location, true);
+  loadData($scope, $http, $sce, $location, 'public');
 });
 
 paintingsControllers.controller('AllPaintingsCtrl', function ($scope, $http, $sce, $location) {
-  loadData($scope, $http, $sce, $location, false);
+  loadData($scope, $http, $sce, $location, 'private');
 });
 
-function loadData($scope, $http, $sce, $location, isPrivateHidden) {
-  $scope.paintings = [];
-  $scope.dataPaintings = []
-  $scope.location = $location.path();
+paintingsControllers.controller('PaintingCtrl', function ($scope, $http, $sce, $routeParams, $window) {
+  $scope.loading = true;
+  var spinnerStart = Date.now();
+  var minTime = 200;
+
+  function hideSpinner() {
+    var elapsed = Date.now() - spinnerStart;
+    var remaining = Math.max(0, minTime - elapsed);
+    setTimeout(function () { $scope.$apply(function () { $scope.loading = false; }); }, remaining);
+  }
 
   $http.get('data/data.json').success(function (data) {
-    $scope.paintings = data;
-    $scope.dataPaintings = data
-    if (isPrivateHidden) {
-      hidePrivatePaintings($scope);
+    $scope.painting = data.find(function (p) { return p.number === parseInt($routeParams.number); });
+    if ($scope.painting) {
+      $scope.trustedHtmlText = $sce.trustAsHtml($scope.painting.text);
     }
-    // $scope.paintings = partition($scope.paintings, 6);
+    if ($scope.painting && $scope.painting.imageFile) {
+      var img = new Image();
+      img.onload = hideSpinner;
+      img.onerror = hideSpinner;
+      img.src = 'images/basse-def/' + $scope.painting.imageFile;
+    } else {
+      hideSpinner();
+    }
+  });
+
+  $scope.back = function () { $window.history.back(); };
+});
+
+function loadData($scope, $http, $sce, $location, mode) {
+  $scope.paintings = [];
+  $scope.dataPaintings = [];
+  $scope.loading = true;
+  $scope.location = $location.path();
+  var spinnerStart = Date.now();
+
+  $http.get('data/data.json').success(function (data) {
+    $scope.totalPaintings = data.length;
+    if (mode === 'private') {
+      $scope.paintings = data.filter(function (e) { return e.isPrivate; });
+    } else if (mode === 'public') {
+      $scope.paintings = data.filter(function (e) { return !e.isPrivate; });
+    } else {
+      $scope.paintings = data;
+    }
+    $scope.dataPaintings = $scope.paintings;
+    var elapsed = Date.now() - spinnerStart;
+    var minTime = 500;
+    var hideSpinner = function() { $scope.loading = false; };
+    if (elapsed >= minTime) {
+      hideSpinner();
+    } else {
+      setTimeout(function() { $scope.$apply(hideSpinner); }, minTime - elapsed);
+    }
+    var savedScroll = sessionStorage.getItem('scrollPos');
+    if (savedScroll) {
+      setTimeout(function () {
+        window.scrollTo({ top: parseInt(savedScroll), behavior: 'instant' });
+        sessionStorage.removeItem('scrollPos');
+      }, 0);
+    }
+    $scope.centuries = [];
+    [1, 100, 200, 300, 400].forEach(function(marker) {
+      var found = $scope.paintings.find(function(p) { return p.number >= marker; });
+      if (found) $scope.centuries.push({ label: marker, number: found.number });
+    });
   }).error(function (data, status) {
     console.log(status);
   });
+
+  $scope.saveScroll = function() {
+    sessionStorage.setItem('scrollPos', window.scrollY);
+  };
+
+  $scope.scrollTo = function(id, isFirst) {
+    if (isFirst) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } else {
+      var el = document.getElementById(id);
+      if (el) {
+        var bar = document.querySelector('.collection-bar');
+        var offset = bar ? bar.offsetHeight : 0;
+        var top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'instant' });
+      }
+    }
+  };
 
   $scope.open = function (painting) {
     $scope.current = painting;
@@ -30,13 +102,6 @@ function loadData($scope, $http, $sce, $location, isPrivateHidden) {
   };
 }
 
-function hidePrivatePaintings($scope) {
-  $scope.paintings = $scope.paintings.filter(function (element) {
-    // hack to avoid displaying Glyphicon
-    element.isPrivate = !element.isPrivate;
-    return element.isPrivate;
-  });
-}
 
 function partition(arr, size) {
   arr = arr.filter(function (element) {
